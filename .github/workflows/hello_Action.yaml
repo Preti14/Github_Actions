@@ -1,6 +1,6 @@
 name: "Hello Actions"
-description: "Greet someone"
-author: "Preethi"
+permissions: "Greet someone"
+
 on:
   workflow_dispatch:
     inputs:
