@@ -3,6 +3,12 @@ on:
   workflow_dispatch:
     inputs:
       name:
-         description: "Who to Greet"
-         default: "World"
+        description: "Who to Greet"
+        default: "World"
+jobs:
+  hello:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Hello Step
+        run: echo "Hello ${{ github.event.inputs.name }}"
