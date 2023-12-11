@@ -5,15 +5,6 @@ on:
       name:
         description: "Who to greet"
         required: true
-        default: "World"
-
-    runs:
-      uses: "docker"
-      image: "Dockerfile"
-
-    branding:
-      icon: "mic"
-      color: "purple"
 jobs:
   hello:
     runs-on: ubuntu-latest
