@@ -15,4 +15,11 @@ on:
 
     branding:
       icon: "mic"
-    color: "purple"
+      color: "purple"
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello action
+        run: echo "Hello ${{ github.event.inputs.MY_NAME }}"
