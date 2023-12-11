@@ -1,4 +1,8 @@
 name: Manual Trigger
 on:
   workflow_dispatch:
+    inputs:
+      name:
+         description: "Who to Greet"
+         default: "World"
 
