@@ -2,7 +2,7 @@ name: "Hello Actions"
 on:
   workflow_dispatch:
     inputs:
-      MY_NAME:
+      name:
         description: "Who to greet"
         required: true
         default: "World"
@@ -20,4 +20,4 @@ jobs:
 
     steps:
       - name: Hello action
-        run: echo "Hello ${{ github.event.inputs.MY_NAME }}"
+        run: echo "Hello User ${{ github.event.inputs.name }}"
