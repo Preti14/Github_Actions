@@ -2,7 +2,7 @@ name: "Hello Actions"
 description: "Greet someone"
 author: "Preethi"
 on:
-  work_dispatch:
+  workflow_dispatch:
     inputs:
       MY_NAME:
         description: "Who to greet"
