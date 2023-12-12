@@ -1,23 +1,25 @@
-name: Hello, World!
-description: Greet someone and record the time
-author: GitHub Actions
+name: Example Workflow
 
-# Define your inputs here.
 on:
   workflow_dispatch:
     inputs:
       who-to-greet:
-        description: Who to greet
+        description: Who to greet in the log
         required: true
-        default: World
+        default: 'World'
+        type: string
 
-    # Define your outputs here.
-    outputs:
-      time:
-        description: The time we greeted you
+jobs:
+  say-hello:
+    name: Say Hello
+    runs-on: ubuntu-latest
 
-    runs:
-      using: docker
-      image: Dockerfile
-      env:
-        INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
+    steps:
+      # Change @main to a specific commit SHA or version tag, e.g.:
+      # actions/hello-world-docker-action@e76147da8e5c81eaf017dede5645551d4b94427b
+      # actions/hello-world-docker-action@v1.2.3
+      - name: Print to Log
+        id: print-to-log
+        uses: actions/Github_Action@main
+        with:
+          who-to-greet: ${{ inputs.who-to-greet }}
