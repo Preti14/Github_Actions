@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       who-to-greet:
-        description: Who to greet in the log
+        description: Print something here
         required: true
         default: 'World'
         type: string
