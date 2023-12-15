@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       who-to-greet:
-        description: Print something here @@@@@@@@@@@@@@
+        description: Print something here !!!!!!!!!!
         required: true
         default: 'World'
         type: string
